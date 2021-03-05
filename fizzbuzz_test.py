@@ -59,6 +59,15 @@ class FizzBuzzTestCase(unittest.TestCase):
         self.assertEqual("Buzz", lines[25])
         self.assertEqual("Buzz", lines[55])
 
+    def testFizzBuzz(self):
+        # Tests that FizzBuzz is printed for multiples of 3 and 5
+
+        lines = self.catchSplitStdout()
+
+        self.assertEqual("FizzBuzz", lines[15])
+        self.assertEqual("FizzBuzz", lines[30])
+        self.assertEqual("FizzBuzz", lines[75])
+        self.assertEqual("FizzBuzz", lines[90])
 
 if __name__ == "__main__":
     unittest.main()
