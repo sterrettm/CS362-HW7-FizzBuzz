@@ -40,7 +40,7 @@ class FizzBuzzTestCase(unittest.TestCase):
         self.assertEqual("91", lines[91])
 
     def testFizz(self):
-        # Tests that multiples of 3 that aren't multiples of 5 print fizz
+        # Tests that multiples of 3 that aren't multiples of 5 print Fizz
 
         lines = self.catchSplitStdout()
 
@@ -49,7 +49,15 @@ class FizzBuzzTestCase(unittest.TestCase):
         self.assertEqual("Fizz", lines[27])
         self.assertEqual("Fizz", lines[99])
         
-        
+    def testBuzz(self):
+        # Tests that multiples of 5 that aren't multiples of 3 print Buzz
+
+        lines = self.catchSplitStdout()
+
+        self.assertEqual("Buzz", lines[5])
+        self.assertEqual("Buzz", lines[10])
+        self.assertEqual("Buzz", lines[25])
+        self.assertEqual("Buzz", lines[55])
 
 
 if __name__ == "__main__":
